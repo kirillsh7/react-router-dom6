@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { characters, episodes, locations } from '../../../public'
+import { characters, episodes, locations } from '../../../constants'
 import './CategoryList.css'
 
 export const CategoryList = () => {

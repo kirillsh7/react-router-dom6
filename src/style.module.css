@@ -1,154 +1,196 @@
 .container {
+  background: linear-gradient(135deg, #0a192f 0%, #0d1b2a 100%);
+  /* color: #e6f1ff; */
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  position: relative;
   min-height: 100vh;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-  color: white;
-  font-family: 'Arial', sans-serif;
 }
+
+/* Эффект звезд на фоне */
+
 
 /* Стили для верхней навигационной панели */
 .topNav {
-  background: rgba(0, 0, 0, 0.4);
-  padding: 1rem 2rem;
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(11, 25, 41, 0.95);
+  padding: 0.8rem 1.5rem;
+  border-bottom: 1px solid rgba(0, 180, 216, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .navLinks {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .navLink {
-  color: white;
+  color: #caf0f8;
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
   transition: all 0.3s ease;
   font-weight: 500;
+  font-size: 0.9rem;
+  background: rgba(0, 180, 216, 0.08);
+  border: 1px solid rgba(0, 180, 216, 0.15);
 }
 
 .navLink:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: #00b4d8;
+  background: rgba(0, 180, 216, 0.15);
+  color: #90e0ef;
+  border-color: #00b4d8;
+  transform: translateY(-1px);
 }
 
 .header {
-  padding: 2rem 0;
+  padding: 2.5rem 1rem;
   text-align: center;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
+  position: relative;
 }
 
 .title {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-  background: linear-gradient(45deg, #00b4d8, #90e0ef);
+  font-size: 2.2rem;
+  margin-bottom: 0.8rem;
+  background: linear-gradient(45deg, #00b4d8, #0077b6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
+.title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #00b4d8;
+  margin: 0.5rem auto;
+  opacity: 0.7;
+}
+
 .subtitle {
-  font-size: 1.2rem;
-  opacity: 0.8;
+  font-size: 1rem;
+  color: #90e0ef;
   margin-bottom: 2rem;
+  opacity: 0.9;
 }
 
 .nav {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
   padding: 0 1rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .navCard {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 15px;
-  padding: 2rem;
-  width: 250px;
+  background: rgba(14, 35, 58, 0.7);
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 220px;
   text-align: center;
   text-decoration: none;
-  color: white;
+  color: #e6f1ff;
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .navCard:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-4px);
+  background: rgba(14, 35, 58, 0.85);
   border-color: #00b4d8;
-  box-shadow: 0 10px 25px rgba(0, 180, 216, 0.3);
+  box-shadow: 0 6px 16px rgba(0, 119, 182, 0.2);
 }
 
 .navIcon {
-  font-size: 3rem;
+  font-size: 2.2rem;
   margin-bottom: 1rem;
 }
 
 .navTitle {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
+  color: #90e0ef;
+  font-weight: 600;
 }
 
 .navDescription {
-  opacity: 0.7;
-  font-size: 0.9rem;
+  color: #caf0f8;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  opacity: 0.8;
 }
 
 .main {
-  padding: 4rem 2rem;
   text-align: center;
 }
 
 .welcome {
-  max-width: 800px;
-  margin: 0 auto 4rem;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  background: rgba(14, 35, 58, 0.5);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 180, 216, 0.15);
 }
 
 .welcomeTitle {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #48cae4;
 }
 
 .welcomeText {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.6;
+  color: #caf0f8;
   opacity: 0.9;
 }
 
 .features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .feature {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 2rem;
+  background: rgba(14, 35, 58, 0.6);
+  padding: 1.8rem;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 180, 216, 0.15);
+  transition: all 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-3px);
+  border-color: #00b4d8;
+  box-shadow: 0 6px 12px rgba(0, 119, 182, 0.15);
 }
 
 .featureTitle {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  color: #90e0ef;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #48cae4;
+  font-weight: 600;
 }
 
 .featureText {
-  opacity: 0.8;
+  color: #caf0f8;
+  font-size: 0.9rem;
   line-height: 1.5;
+  opacity: 0.9;
 }
 
 @media (max-width: 768px) {
   .topNav {
-    padding: 1rem;
+    padding: 0.6rem 1rem;
   }
   
   .navLinks {
@@ -156,17 +198,55 @@
     justify-content: center;
   }
   
+  .navLink {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  
   .title {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
   }
   
   .nav {
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
   }
   
   .navCard {
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
+    padding: 1.2rem;
   }
+  
+  .navIcon {
+    font-size: 1.8rem;
+  }
+  
+  .welcome {
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .welcomeTitle {
+    font-size: 1.5rem;
+  }
+  
+  .features {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .feature {
+    padding: 1.5rem;
+  }
+}
+
+/* Плавная прокрутка */
+html {
+  scroll-behavior: smooth;
 }

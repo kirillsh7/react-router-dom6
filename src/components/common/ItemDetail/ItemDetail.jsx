@@ -1,5 +1,5 @@
 import { useParams, Link, useNavigate } from 'react-router-dom'
-import { characters, episodes, locations } from '../../../public'
+import { characters, episodes, locations } from '../../../constants'
 import './ItemDetail.css'
 
 export const ItemDetail = () => {
